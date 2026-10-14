@@ -722,7 +722,8 @@ td.share { min-width: 120px; }
   section > h2 { font-size: 16px; }
   .chart { gap: 3px; height: 190px; }
   .col .lbl { font-size: 9px; }
-  .col .tot { font-size: 8px; }
+  .col .tot { font-size: 9px; visibility: hidden; }
+  .col.sel .tot { visibility: visible; white-space: nowrap; } /* 12–14 totals don't fit side by side on a phone */
   .drow { grid-template-columns: 1fr 110px; }
   .drow .chk { grid-column: 1 / -1; }
 }
