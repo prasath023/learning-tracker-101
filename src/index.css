@@ -746,8 +746,8 @@ td.share { min-width: 120px; }
 }
 .quote figcaption::after { transform: scaleX(-1); }
 .quote blockquote {
-  margin: 2px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400;
-  font-size: clamp(32px, 5.4vw, 52px); letter-spacing: -0.005em; line-height: 1.05;
+  margin: 6px 0 0; font-family: 'Unbounded', var(--font-display); font-weight: 500;
+  font-size: clamp(20px, 3.4vw, 32px); letter-spacing: 0.02em; word-spacing: 0.18em; line-height: 1.2;
   color: var(--quote); /* whitish gray in dark mode, slate in light */
 }
 @media (max-width: 760px) {

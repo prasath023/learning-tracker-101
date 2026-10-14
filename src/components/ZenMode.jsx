@@ -145,7 +145,7 @@ export default function ZenMode({ state, actions, onClose }) {
           </div>
         ) : (
           <div className="fs-main">
-            <div className="fs-idle">Pick a subject to begin</div>
+            <div className="fs-idle">{state.subjects.length ? 'Pick a subject to begin' : 'Add a subject on the Dashboard to begin'}</div>
             <div className="fs-pick">
               {state.subjects.map((x) => (
                 <button key={x.id} style={{ '--c': x.color }} onClick={() => actions.startTimer(x.id)}>

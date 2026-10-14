@@ -33,19 +33,7 @@ export const TOPIC_TEMPLATES = {
 
 export const makeTopics = (texts) => texts.map((text) => ({ id: uid(), text, done: false }));
 
+/** A new account starts empty; subjects are added from the Dashboard. */
 export function defaultState() {
-  const seed = [
-    ['DSA', '#ffa116', 90],
-    ['System Design', '#3b82f6', 60],
-    ['AWS', '#a855f7', 45],
-    ['English Speaking', '#ec4899', 30],
-  ];
-  const subjects = [];
-  const topics = {};
-  for (const [name, color, goal] of seed) {
-    const id = uid();
-    subjects.push({ id, name, color, goal });
-    topics[id] = makeTopics(TOPIC_TEMPLATES[name]);
-  }
-  return { version: 2, subjects, logs: {}, notes: {}, topics, schedule: [], timer: null, ui: { period: 'daily', topicTab: subjects[0].id } };
+  return { version: 2, subjects: [], logs: {}, notes: {}, topics: {}, schedule: [], timer: null, ui: { period: 'daily', topicTab: null } };
 }
